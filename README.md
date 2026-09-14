@@ -107,11 +107,17 @@ uv run django-admin startproject cfehome src
 uv add python-decouple 'psycopg[binary]' dj-database-url
 ```
 
-`.env`
+`.env.example`
+
 ```bash
 SECRET_KEY=change-me
 DEBUG=True
 DATABASE_URL=postgres://user:pass@host:port/dbname
+OPENAI_API_KEY=
+```
+
+```bash
+cp .env.example .env
 ```
 
 `cfehome/settings.py`
